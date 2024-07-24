@@ -1,0 +1,14 @@
+C:\Users\test\OneDrive\Desktop\c# Jet\ShipGame\ShipGame\obj\Debug\net8.0\ShipGame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\test\OneDrive\Desktop\c# Jet\ShipGame\ShipGame\obj\Debug\net8.0\ShipGame.AssemblyInfoInputs.cache
+C:\Users\test\OneDrive\Desktop\c# Jet\ShipGame\ShipGame\obj\Debug\net8.0\ShipGame.AssemblyInfo.cs
+C:\Users\test\OneDrive\Desktop\c# Jet\ShipGame\ShipGame\obj\Debug\net8.0\ShipGame.csproj.CoreCompileInputs.cache
+C:\Users\test\OneDrive\Desktop\c# Jet\ShipGame\ShipGame\bin\Debug\net8.0\ShipGame.exe
+C:\Users\test\OneDrive\Desktop\c# Jet\ShipGame\ShipGame\bin\Debug\net8.0\ShipGame.deps.json
+C:\Users\test\OneDrive\Desktop\c# Jet\ShipGame\ShipGame\bin\Debug\net8.0\ShipGame.runtimeconfig.json
+C:\Users\test\OneDrive\Desktop\c# Jet\ShipGame\ShipGame\bin\Debug\net8.0\ShipGame.dll
+C:\Users\test\OneDrive\Desktop\c# Jet\ShipGame\ShipGame\bin\Debug\net8.0\ShipGame.pdb
+C:\Users\test\OneDrive\Desktop\c# Jet\ShipGame\ShipGame\obj\Debug\net8.0\ShipGame.dll
+C:\Users\test\OneDrive\Desktop\c# Jet\ShipGame\ShipGame\obj\Debug\net8.0\refint\ShipGame.dll
+C:\Users\test\OneDrive\Desktop\c# Jet\ShipGame\ShipGame\obj\Debug\net8.0\ShipGame.pdb
+C:\Users\test\OneDrive\Desktop\c# Jet\ShipGame\ShipGame\obj\Debug\net8.0\ShipGame.genruntimeconfig.cache
+C:\Users\test\OneDrive\Desktop\c# Jet\ShipGame\ShipGame\obj\Debug\net8.0\ref\ShipGame.dll
