@@ -6,7 +6,7 @@ namespace ShipGame.Models
     {
         private Grid grid;
         private string playerFullName;
-        private int maxAttempts = 5;
+        private int maxAttempts = 5; // it shows max opportunity of user
 
         public Game(int gridSize, string fullname)
         {
@@ -31,6 +31,7 @@ namespace ShipGame.Models
                 if (parts.Length != 2)
                 {
                     Console.WriteLine("Incorrect format. Please use the format x,y.");
+                    Console.ReadLine(); 
                     continue;
                 }
 
@@ -38,6 +39,20 @@ namespace ShipGame.Models
                 {
                     int x = int.Parse(parts[0].Trim());
                     int y = int.Parse(parts[1].Trim());
+
+                    if (x < 0 || x >= grid.Size || y < 0 || y >= grid.Size)
+                    {
+                        Console.WriteLine("Coordinates are out of bounds. Please enter values within the grid range.");
+                        Console.ReadLine(); 
+                        continue;
+                    }
+
+                    if (grid.IsMine(x, y))
+                    {
+                        Console.WriteLine("You hit a mine! You lose! Press Enter to exit.");
+                        Console.ReadLine(); 
+                        break;
+                    }
 
                     bool hit = grid.Shoot(x, y);
                     if (hit)
@@ -53,29 +68,31 @@ namespace ShipGame.Models
 
                     if (grid.AllShipsHit())
                     {
-                        Console.WriteLine("Congratulations! All ships have been sunk. You win!");
+                        Console.WriteLine($"Congratulations, {playerFullName}! All ships have been sunk. You win!");
+                        Console.ReadLine(); 
                         break;
                     }
 
                     if (attempts >= maxAttempts)
                     {
-                        Console.WriteLine("Game over! You've used all your attempts. You lose!");
+                        Console.WriteLine($"Game over, {playerFullName}! You've used all your attempts. You lose!");
+                        Console.ReadLine(); 
                         break;
                     }
                 }
                 catch (FormatException)
                 {
                     Console.WriteLine("Incorrect coordinates. Please enter correct integers for x and y.");
+                    Console.ReadLine();
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine($"An error happened: {ex.Message}");
+                    Console.ReadLine();
                 }
             }
 
-            //Console.WriteLine($"Game over! You've used {attempts} out of {maxAttempts} attempts.");
-            Console.WriteLine("Press Enter to exit.");
-            Console.ReadLine();  // Wait for user to press Enter before closing
+            Console.WriteLine($"Game over, {playerFullName}! You've used {attempts} out of {maxAttempts} attempts.");
         }
 
         private void DisplayGameTitle()

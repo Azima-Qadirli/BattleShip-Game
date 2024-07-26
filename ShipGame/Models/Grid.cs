@@ -9,6 +9,8 @@ namespace ShipGame.Models
         private char[,] grid;
         private List<Ship> ships;
         private Random random;
+        private List<Mine> mines;
+        public int Size => size; 
 
         public Grid(int size)
         {
@@ -16,9 +18,11 @@ namespace ShipGame.Models
             grid = new char[size, size];
             ships = new List<Ship>();
             random = new Random();
+            mines = new List<Mine>();
 
             InitializeGrid();
             PlaceShipsRandomly();
+            PlaceMinesRandomly(); // it shows mines are placed randomly
         }
 
         private void InitializeGrid()
@@ -38,7 +42,7 @@ namespace ShipGame.Models
 
             for (int i = 0; i < numberOfShips; i++)
             {
-                int shipLength = random.Next(1, 5); // Length of ship between 1 and 4
+                int shipLength = random.Next(1, 5); // it shows and generate random length of ship between 1 and 4
                 Ship ship = new Ship(shipLength);
                 PlaceShip(ship);
                 ships.Add(ship);
@@ -105,9 +109,14 @@ namespace ShipGame.Models
                 grid[x, y] = 'H'; // Hit
                 return true;
             }
+            else if (grid[x, y] == 'M')
+            {
+                grid[x, y] = 'X'; // it shows that mine hit
+                return false;
+            }
             else
             {
-                grid[x, y] = 'M'; // Miss
+                grid[x, y] = 'M'; // it defines that ship misses
                 return false;
             }
         }
@@ -118,12 +127,20 @@ namespace ShipGame.Models
             {
                 for (int j = 0; j < size; j++)
                 {
-                    char displayChar = grid[i, j] == 'S' ? '*' : grid[i, j];
-                    Console.Write(displayChar + " ");
+                    char displayChar = grid[i, j];
+                    if (displayChar == 'S') // Ship is hidden in grid
+                    {
+                        Console.Write("* ");
+                    }
+                    else
+                    {
+                        Console.Write(displayChar + " ");
+                    }
                 }
                 Console.WriteLine();
             }
         }
+
 
         public bool AllShipsHit()
         {
@@ -138,6 +155,29 @@ namespace ShipGame.Models
                 }
             }
             return true;
+        }
+
+        private void PlaceMinesRandomly()
+        {
+            int numberOfMines = size / 4;
+            for (int i = 0; i < numberOfMines; i++)
+            {
+                int x, y;
+                do
+                {
+                    x = random.Next(0, size);
+                    y = random.Next(0, size);
+                }
+                while (grid[x, y] != '*');  // Ensure mines are placed on water, not overlapping with ships
+
+                grid[x, y] = 'M';
+                mines.Add(new Mine(x, y));
+            }
+        }
+
+        public bool IsMine(int x, int y)
+        {
+            return grid[x, y] == 'M';
         }
     }
 }

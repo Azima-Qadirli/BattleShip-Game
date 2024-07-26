@@ -15,6 +15,10 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ShipGame\\Models\\Game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\test\\OneDrive\\Desktop\\c# Jet\\ShipGame\\ShipGame\\Models\\Mine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ShipGame\\Models\\Mine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\test\\OneDrive\\Desktop\\c# Jet\\ShipGame\\ShipGame\\Models\\Grid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ShipGame\\Models\\Grid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -26,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -39,12 +43,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Mine.cs",
+              "DocumentMoniker": "C:\\Users\\test\\OneDrive\\Desktop\\c# Jet\\ShipGame\\ShipGame\\Models\\Mine.cs",
+              "RelativeDocumentMoniker": "ShipGame\\Models\\Mine.cs",
+              "ToolTip": "C:\\Users\\test\\OneDrive\\Desktop\\c# Jet\\ShipGame\\ShipGame\\Models\\Mine.cs",
+              "RelativeToolTip": "ShipGame\\Models\\Mine.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-26T10:46:13.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Grid.cs",
               "DocumentMoniker": "C:\\Users\\test\\OneDrive\\Desktop\\c# Jet\\ShipGame\\ShipGame\\Models\\Grid.cs",
               "RelativeDocumentMoniker": "ShipGame\\Models\\Grid.cs",
               "ToolTip": "C:\\Users\\test\\OneDrive\\Desktop\\c# Jet\\ShipGame\\ShipGame\\Models\\Grid.cs",
               "RelativeToolTip": "ShipGame\\Models\\Grid.cs",
-              "ViewState": "AQIAAHIAAAAAAAAAAAAAAI8AAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-22T11:10:30.562Z",
               "EditorCaption": ""
@@ -57,7 +74,7 @@
               "RelativeDocumentMoniker": "ShipGame\\Models\\Game.cs",
               "ToolTip": "C:\\Users\\test\\OneDrive\\Desktop\\c# Jet\\ShipGame\\ShipGame\\Models\\Game.cs",
               "RelativeToolTip": "ShipGame\\Models\\Game.cs",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAAAFkAAAAIAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-22T12:00:10.309Z",
               "EditorCaption": ""
@@ -83,7 +100,7 @@
               "RelativeDocumentMoniker": "ShipGame\\Program.cs",
               "ToolTip": "C:\\Users\\test\\OneDrive\\Desktop\\c# Jet\\ShipGame\\ShipGame\\Program.cs",
               "RelativeToolTip": "ShipGame\\Program.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAAwC4AAAAAAAAA",
+              "ViewState": "AQIAADwAAAAAAAAAAAAAAEsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-22T11:00:42.358Z",
               "EditorCaption": ""

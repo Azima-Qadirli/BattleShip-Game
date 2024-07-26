@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using ShipGame.Models;
 
 namespace ShipGame
@@ -16,8 +17,21 @@ namespace ShipGame
             Console.ResetColor();
             Console.WriteLine();
 
-            Console.WriteLine("Enter your full name: ");
-            string fullname = Console.ReadLine();
+            string fullname;
+            while (true)
+            {
+                Console.WriteLine("Enter your full name (first name and last name, letters only): ");
+                fullname = Console.ReadLine();
+
+                if (IsValidFullName(fullname))
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Incorrect input. Please enter your full name with two words, using only letters.");
+                }
+            }
 
             int gridSize;
             while (true)
@@ -48,6 +62,14 @@ namespace ShipGame
             Console.ForegroundColor = color;
             Console.WriteLine(new string(' ', spaces) + text);
             Console.ResetColor();
+        }
+
+        static bool IsValidFullName(string fullName)
+        {
+            var parts = fullName.Split(' ');
+            if (parts.Length != 2) return false;
+
+            return parts.All(part => part.All(char.IsLetter));
         }
     }
 }
