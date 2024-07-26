@@ -6,7 +6,7 @@ namespace ShipGame.Models
     {
         private Grid grid;
         private string playerFullName;
-       
+        private int maxAttempts = 5;
 
         public Game(int gridSize, string fullname)
         {
@@ -16,19 +16,16 @@ namespace ShipGame.Models
 
         public void Start()
         {
-            
-            while (true)
+            int attempts = 0;
+
+            while (attempts < maxAttempts)
             {
+                Console.Clear();
+                DisplayGameTitle();
                 grid.DisplayHiddenGrid();
-                Console.WriteLine("Enter coordinates to shoot (as x,y) or type 'exit' to finish: ");
+
+                Console.WriteLine($"{playerFullName}, enter coordinates to shoot (as x,y): ");
                 string input = Console.ReadLine();
-
-                if (input.ToLower() == "exit")
-                {
-                    Console.WriteLine("Exiting the game. Goodbye!");
-                    break;
-                }
-
                 string[] parts = input.Split(',');
 
                 if (parts.Length != 2)
@@ -52,10 +49,18 @@ namespace ShipGame.Models
                         Console.WriteLine("Miss!");
                     }
 
+                    attempts++;
+
                     if (grid.AllShipsHit())
                     {
-                        Console.WriteLine($"Congratulations {playerFullName}! You have sunk all the ships!");
-                        break; // Exit the loop when all ships are sunk
+                        Console.WriteLine("Congratulations! All ships have been sunk. You win!");
+                        break;
+                    }
+
+                    if (attempts >= maxAttempts)
+                    {
+                        Console.WriteLine("Game over! You've used all your attempts. You lose!");
+                        break;
                     }
                 }
                 catch (FormatException)
@@ -64,11 +69,28 @@ namespace ShipGame.Models
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"An error occurred: {ex.Message}");
+                    Console.WriteLine($"An error happened: {ex.Message}");
                 }
             }
-            Console.ReadKey();
+
+            //Console.WriteLine($"Game over! You've used {attempts} out of {maxAttempts} attempts.");
+            Console.WriteLine("Press Enter to exit.");
+            Console.ReadLine();  // Wait for user to press Enter before closing
         }
 
+        private void DisplayGameTitle()
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine(new string('*', Console.WindowWidth));
+            Console.WriteLine(CenterText("BATTLESHIP GAME", Console.WindowWidth));
+            Console.WriteLine(new string('*', Console.WindowWidth));
+            Console.ResetColor();
+        }
+
+        private string CenterText(string text, int width)
+        {
+            int leftPadding = (width - text.Length) / 2;
+            return new string(' ', leftPadding) + text;
+        }
     }
 }

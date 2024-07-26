@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ShipGame")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e4f6790c38becfe427eb90b116e8db762e4ca1ea")]
 [assembly: System.Reflection.AssemblyProductAttribute("ShipGame")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ShipGame")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

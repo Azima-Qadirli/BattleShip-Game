@@ -112,6 +112,19 @@ namespace ShipGame.Models
             }
         }
 
+        public void DisplayHiddenGrid()
+        {
+            for (int i = 0; i < size; i++)
+            {
+                for (int j = 0; j < size; j++)
+                {
+                    char displayChar = grid[i, j] == 'S' ? '*' : grid[i, j];
+                    Console.Write(displayChar + " ");
+                }
+                Console.WriteLine();
+            }
+        }
+
         public bool AllShipsHit()
         {
             foreach (var ship in ships)
@@ -120,30 +133,11 @@ namespace ShipGame.Models
                 {
                     if (grid[position.Item1, position.Item2] != 'H')
                     {
-                        return false; // There's at least one part of a ship not hit
+                        return false;
                     }
                 }
             }
-            return true; // All parts of all ships have been hit
-        }
-
-        public void DisplayHiddenGrid()
-        {
-            for (int i = 0; i < size; i++)
-            {
-                for (int j = 0; j < size; j++)
-                {
-                    if (grid[i, j] == 'S')
-                    {
-                        Console.Write("* ");
-                    }
-                    else
-                    {
-                        Console.Write(grid[i, j] + " ");
-                    }
-                }
-                Console.WriteLine();
-            }
+            return true;
         }
     }
 }

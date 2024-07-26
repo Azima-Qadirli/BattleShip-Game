@@ -11,15 +11,13 @@ namespace ShipGame
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.BackgroundColor = ConsoleColor.Black;
             DisplayCenteredText("*********************************************", ConsoleColor.Cyan);
-            DisplayCenteredText("*      BATTLESHIP GAME        *", ConsoleColor.Yellow);
+            DisplayCenteredText("*              BATTLESHIP GAME              *", ConsoleColor.Yellow);
             DisplayCenteredText("*********************************************", ConsoleColor.Cyan);
             Console.ResetColor();
             Console.WriteLine();
-            
-            
-            Console.WriteLine("Enter your fullname: ");
+
+            Console.WriteLine("Enter your full name: ");
             string fullname = Console.ReadLine();
-            
 
             int gridSize;
             while (true)
@@ -39,18 +37,17 @@ namespace ShipGame
 
             Game game = new Game(gridSize, fullname);
             game.Start();
+        }
 
+        static void DisplayCenteredText(string text, ConsoleColor color)
+        {
+            int consoleWidth = Console.WindowWidth;
+            int textLength = text.Length;
+            int spaces = (consoleWidth - textLength) / 2;
 
-            static void DisplayCenteredText(string text,ConsoleColor color )
-            {
-                int consoleWidth = Console.WindowWidth;
-                int textLength = text.Length;
-                int spaces = (consoleWidth - textLength) / 2;
-
-                Console.ForegroundColor = color;
-                Console.WriteLine(new string(' ', spaces) + text);
-                Console.ResetColor();
-            }
+            Console.ForegroundColor = color;
+            Console.WriteLine(new string(' ', spaces) + text);
+            Console.ResetColor();
         }
     }
 }

@@ -12,3 +12,4 @@ C:\Users\test\OneDrive\Desktop\c# Jet\ShipGame\ShipGame\obj\Debug\net8.0\refint\
 C:\Users\test\OneDrive\Desktop\c# Jet\ShipGame\ShipGame\obj\Debug\net8.0\ShipGame.pdb
 C:\Users\test\OneDrive\Desktop\c# Jet\ShipGame\ShipGame\obj\Debug\net8.0\ShipGame.genruntimeconfig.cache
 C:\Users\test\OneDrive\Desktop\c# Jet\ShipGame\ShipGame\obj\Debug\net8.0\ref\ShipGame.dll
+C:\Users\test\OneDrive\Desktop\c# Jet\ShipGame\ShipGame\obj\Debug\net8.0\ShipGame.sourcelink.json
